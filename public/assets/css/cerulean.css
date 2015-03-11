@@ -5747,11 +5747,12 @@ button.close {
     outline: 0;
 }
 .modal-backdrop {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     right: 0;
     left: 0;
     background-color: #000000;
+    z-index: 2;
 }
 .modal-backdrop.fade {
     opacity: 0;

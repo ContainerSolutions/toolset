@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" ng-app="Toolset">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toolset</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/variables.css">
+    <link rel="stylesheet" href="/assets/css/cerulean.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/angular-route/angular-route.min.js"></script>
+    <script src="/vendor/angular-resource/angular-resource.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Toolset</a>
+
+            </div>
+            <div class="collapse navbar-collapse">
+                <p class="navbar-text navbar-right navbar-brand">
+                    <img alt="Toolset" src="/assets/img/cs_transparent_logo.png">
+                </p>
+            </div>
+        </div>
+    </nav>
+    <div class="container header">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Getting started with Toolset</h1>
+                <p class="lead">
+                    Find your favourite tools and get them running quickly on your machine with <a href="https://www.docker.com/">Docker</a>.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2>Enterprise Edition</h2>
+                 <p>
+                     For enterprises who want to cost-effectively on-board a large number of engineers, but who also need security and the ability to control which applications go into the Toolset, they can contact our sales staff about Toolset Enterprise.
+                </p>
+                <p class="sign-up-buttons">
+                    <a href="mailto:info@container-solutions.com" class="btn btn-primary">Contact Us</a>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2>Why Toolset?</h2>
+                 <p>At Container Solutions we believe in cultures of experimentation. We help our customers, partners and friends to experiment more easily by using self-service tools, like this one. For large customers, who want to create a '10X' culture, the Toolset helps to introduce thousands of engineers to Docker. They say a picture tells a thousand words - so too does a script that runs.
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Legal</h2>
+                <p>This tool is provided as is and without warranty. Container Solutions does in no way accept responsibility for scripts executed from this site. If you don't accept this, please don't use this site.</p>
+
+            </div>
+            <div class="col-md-6">
+                <h2>How it works</h2>
+                <p>Container Solution's Toolset gives people a chance to learn about Docker and specifically application containers. By copying the scripts and running them from their terminal, users can experiment with Docker and different applications.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="container content">
+        <h2>Application Containers</h2>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Most Recent</a></li>
+            <li role="presentation"><a href="#">Popular</a></li>
+            <li role="presentation"><a href="#">Categories</a></li>
+        </ul>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="tile">
+                    <div class="tile-header">
+                        <h4>Eclipse</h4>
+                    </div>
+                    <div class="tile-body">
+                        <div class="icon pull-left">
+                            <img src="/assets/img/eclipse-logo.jpg" width="73">
+                        </div>
+                        <div class="details pull-left">
+                            <p>Java IDE</p>
+                            <a href="https://eclipse.org/" target="_blank">Project Page</a><br>
+                            <!--<p>downloaded 125x</p>-->
+                            <!--<p class="stars">-->
+                                <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
+                                <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
+                                <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
+                                <!--<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>-->
+                                <!--<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>-->
+                            <!--</p>-->
+                            <a href="#" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Run Eclipse</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <blockquote class="footer-blockquote">
+                    <p>The future is containerized.</p>
+                    <footer>Adrian Mouat in <cite title="Source Title">Container Solutions</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Start using Reveal JS</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="icon pull-right">
+                            <img src="/assets/img/delete-me-1.png">
+                        </div>
+                        <p>Java IDE</p>
+                        <a href="#">Project Page</a><br>
+                        <p>downloaded 1235x</p>
+                        <p class="stars">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                        </p>
+                        <hr>
+                        <pre><small><strong>Copy and paste the code below into your terminal:</strong>
+                                <code>TOOLSET_HOST="http://toolset.laurasjourney.nl"
+TOOLSET_PROJECT_DIR_BASE="$HOME/reveal-js-pres"
+TOOLSET_PROJECT_DIR="$TOOLSET_PROJECT_DIR_BASE"
+TOOLSET_PROJECT_DIR_COUNTER=0
+while [[ -d "$TOOLSET_PROJECT_DIR" ]] ; do
+TOOLSET_PROJECT_DIR_COUNTER=`expr $TOOLSET_PROJECT_DIR_COUNTER + 1`
+TOOLSET_PROJECT_DIR="$TOOLSET_PROJECT_DIR_BASE-$TOOLSET_PROJECT_DIR_COUNTER"
+done
+mkdir $TOOLSET_PROJECT_DIR && cd $TOOLSET_PROJECT_DIR
+
+curl $TOOLSET_HOST/static/downloads/pres-base-0.1/pres.tar | tar xv
+
+docker run -p 8000:8000 -p 35729:35729 -v $(pwd)/pres/:/revealjs/pres/:ro containersol/pres-base:0.1
+                                </code>
+                            </small>
+                        </pre>
+                        <h5>Description</h5>
+                        <p>Now go to localhost:8080. The presentation resides in your project directory; why not open a new tab and edit pres/slides.md?</p>
+                        <p>Note that the image run RevealJS 2.6 and ot yet 3.0. It has been tested in Chrome and been found to be a bit buggy in Firefox.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Developed by <a href="http://www.container-solutions.com/" target="_blank">Container Solutions</a> in Amsterdam
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "containersol/toolset",
+  "dependencies": {
+    "angular": "~1.3",
+    "angular-route": "~1.3",
+    "bootstrap": "~3.2",
+    "jquery": "~2.1"
+  }
+}

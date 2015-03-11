@@ -55,11 +55,20 @@ body {
   }
 }
 
+.tile-wrapper {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 25px;
+}
 .tile {
   padding: 15px;
-  margin-top: 25px;
   border: 1px solid #555555; // @grey
   border-top: 3px solid #555555;
+  min-height: 136px;
   &:hover {
     border-color: #54b4eb; // @brand-primary
   }
@@ -70,12 +79,9 @@ body {
     }
   }
   .tile-body {
-//    .icon {
-//      float: left;
-//      position: relative;
-//    }
     .details {
       margin-left: 10px;
+      max-width: 140px;
     }
     p {
       margin-bottom: 0px;
@@ -83,9 +89,6 @@ body {
     .stars {
       margin-bottom: 10px;
     }
-//    .tags {
-//
-//    }
   }
 }
 

@@ -43,40 +43,25 @@
         <li role="presentation"><a href="#/">Categories</a></li>
     </ul>
     <div class="row">
-        <div class="col-md-3">
-            <div class="tile">
-                <div class="tile-header">
-                    <h4>Eclipse</h4>
-                </div>
-                <div class="tile-body">
-                    <div class="icon pull-left">
-                        <img src="/assets/img/eclipse-logo.jpg" width="73">
+        <div class="col-md-12">
+            <div ng-repeat="(key, application) in applications" class="tile-wrapper">
+                <div class="tile">
+                    <div class="tile-header">
+                        <h4>{{application.title}}</h4>
                     </div>
-                    <div class="details pull-left">
-                        <p>Java IDE</p>
-                        <a href="https://eclipse.org/" target="_blank">Project Page</a><br>
-                        <!--<p>downloaded 125x</p>-->
-                        <!--<p class="stars">-->
-                        <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
-                        <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
-                        <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
-                        <!--<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>-->
-                        <!--<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>-->
-                        <!--</p>-->
-                        <a href="#/" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Run Eclipse</a>
+                    <div class="tile-body">
+                        <div class="icon pull-left">
+                            <img src="/assets/img/{{application.logo}}" width="73">
+                        </div>
+                        <div class="details pull-left">
+                            <p><small>{{application.subtitle}}</small></p>
+                            <a href="{{application.url}}" target="_blank">Project Page</a><br>
+                            <a href="#/" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" ng-click="setModal(key)">Run {{application.title}}</a>
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                    <div class="clearfix"></div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-3">
-
         </div>
         <div class="clearfix"></div>
     </div>
@@ -88,50 +73,45 @@
             </blockquote>
         </div>
     </div>
-    <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Start using Reveal JS</h4>
+                    <h4 class="modal-title" id="myModalLabel">Start using {{modalData.title}}</h4>
                 </div>
                 <div class="modal-body">
                     <div class="icon pull-right">
-                        <img src="/assets/img/delete-me-1.png">
+                        <img src="/assets/img/{{modalData.logo}}" width="73">
                     </div>
-                    <p>Java IDE</p>
-                    <a href="#/">Project Page</a><br>
-                    <p>downloaded 1235x</p>
-                    <p class="stars">
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-                    </p>
+                    <p>{{modalData.subtitle}}</p>
+                    <a href="{{modalData.url}}" target="_blank">Project Page</a><br>
+                    <!--<p>downloaded 1235x</p>-->
+                    <!--<p class="stars">-->
+                        <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
+                        <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
+                        <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
+                        <!--<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>-->
+                        <!--<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>-->
+                    <!--</p>-->
                     <hr>
                         <pre><small><strong>Copy and paste the code below into your terminal:</strong>
                             <code>
-TOOLSET_HOST="http://toolset.laurasjourney.nl"
-TOOLSET_PROJECT_DIR_BASE="$HOME/reveal-js-pres"
+TOOLSET_HOST="{{host}}"
+TOOLSET_PROJECT_DIR_BASE="$HOME/{{modalData.base_dir}}"
 TOOLSET_PROJECT_DIR="$TOOLSET_PROJECT_DIR_BASE"
 TOOLSET_PROJECT_DIR_COUNTER=0
 while [[ -d "$TOOLSET_PROJECT_DIR" ]] ; do
-TOOLSET_PROJECT_DIR_COUNTER=`expr $TOOLSET_PROJECT_DIR_COUNTER + 1`
-TOOLSET_PROJECT_DIR="$TOOLSET_PROJECT_DIR_BASE-$TOOLSET_PROJECT_DIR_COUNTER"
+    TOOLSET_PROJECT_DIR_COUNTER=`expr $TOOLSET_PROJECT_DIR_COUNTER + 1`
+    TOOLSET_PROJECT_DIR="$TOOLSET_PROJECT_DIR_BASE-$TOOLSET_PROJECT_DIR_COUNTER"
 done
 mkdir $TOOLSET_PROJECT_DIR && cd $TOOLSET_PROJECT_DIR
 
-curl $TOOLSET_HOST/static/downloads/pres-base-0.1/pres.tar | tar xv
+<span ng-repeat="cmd in modalData.commands">{{cmd}}
 
-docker run -p 8000:8000 -p 35729:35729 -v $(pwd)/pres/:/revealjs/pres/:ro containersol/pres-base:0.1
-                            </code>
-                        </small>
-                        </pre>
+</span></code></small></pre>
                     <h5>Description</h5>
-                    <p>Now go to localhost:8080. The presentation resides in your project directory; why not open a new tab and edit pres/slides.md?</p>
-                    <p>Note that the image run RevealJS 2.6 and ot yet 3.0. It has been tested in Chrome and been found to be a bit buggy in Firefox.</p>
+                    <span ng-bind-html="modalData.description"></span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

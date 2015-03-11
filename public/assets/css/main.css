@@ -50,11 +50,20 @@ body {
 .content .footer-blockquote {
   margin-top: 40px;
 }
+.tile-wrapper {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 25px;
+}
 .tile {
   padding: 15px;
-  margin-top: 25px;
   border: 1px solid #555555;
   border-top: 3px solid #555555;
+  min-height: 136px;
 }
 .tile:hover {
   border-color: #54b4eb;
@@ -65,6 +74,7 @@ body {
 }
 .tile .tile-body .details {
   margin-left: 10px;
+  max-width: 140px;
 }
 .tile .tile-body p {
   margin-bottom: 0px;

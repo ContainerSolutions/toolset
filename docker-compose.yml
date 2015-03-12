@@ -2,5 +2,5 @@ toolset:
   build: .
   ports:
    - "80:80"
-  volumes:
-   - public:/usr/share/nginx/html
+#  volumes:
+#   - public:/usr/share/nginx/html
